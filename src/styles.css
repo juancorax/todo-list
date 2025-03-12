@@ -1,0 +1,143 @@
+:root {
+  --font-family:
+    Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --font-size: 15px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: #2f2f31;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.container {
+  min-width: 75%;
+  margin: 25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #bdbdbd;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  overflow: hidden;
+}
+
+.container > section {
+  padding: 25px;
+  user-select: none;
+}
+
+.projects-section {
+  flex: 1;
+  border-right: 2px solid black;
+  background-color: grey;
+}
+
+.todos-section {
+  flex: 2;
+}
+
+.project,
+.todo-item {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+}
+
+.current-project {
+  color: #bdbdbd;
+  background-color: #2f2f31;
+}
+
+.project,
+.todo-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-showcase-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid black;
+}
+
+.checked-todo .todo-title,
+.checked-todo .todo-details {
+  color: grey;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #dddddd;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+}
+
+dialog {
+  margin: 25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #bdbdbd;
+  box-shadow: 0 0 10px black;
+  user-select: none;
+
+  top: -50%;
+  left: 40%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+dialog.show {
+  top: 25%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+form > div {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.validation-error {
+  color: #d32f2f;
+}
